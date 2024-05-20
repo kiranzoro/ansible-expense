@@ -5,4 +5,4 @@
   - name:  disable
     ansible.builtin.dnf:
       name: nodejs
-      enabled: no
+      state: no
