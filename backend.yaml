@@ -3,6 +3,13 @@
   become: yes
   tasks:
   - name:  disable
+    ansible.builtin.command: dnf module disable nodejs -y
+  - name: enable nodejs 20
+    ansible.builtin.command: dnf module enable nodejs:20 -y
+  - name: insall node js
     ansible.builtin.dnf:
       name: nodejs
-      state: disabled
+      state: installed
+  - name: add user expense
+    ansible.builtin.user:
+      name: expense
