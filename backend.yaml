@@ -2,7 +2,7 @@
   hosts: backend
   become: yes
   tasks:
-  - name: node js disable
+  - name:  disable
     ansible.builtin.dnf:
-    - name: nodejs
+      name: nodejs
       enabled: no
