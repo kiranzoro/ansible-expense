@@ -11,6 +11,12 @@
       name: mysqld
       state: started
       enabled: yes
+  - name: install python mysql dep
+    ansible.builtin.pip:
+      name: 
+      - PyMySQL
+      - cryptography
+      executable: pip3.9
   - name: Check DB Connection
     community.mysql.mysql_info:
       login_user: root
