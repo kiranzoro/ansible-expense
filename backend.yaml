@@ -1,0 +1,8 @@
+- name: backend
+  hosts: backend
+  become: yes
+  tasks:
+  - name: node js disable
+    ansible.builtin.dnf:
+    - name: nodejs
+      state: disabled
