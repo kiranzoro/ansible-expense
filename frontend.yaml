@@ -12,8 +12,8 @@
       state: started
       enabled: yes
   - name: remve default html file
-    ansile.builtin.file:
-      path: /usr/share/nginx/html
+    ansible.builtin.file:
+      path: /usr/share/nginx/html/*
       state: absent
   - name: download zip
     ansible.builtin.get_url:
