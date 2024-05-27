@@ -23,4 +23,5 @@
       dest: /tmp/backend.zip
   - name: cd app
     ansible.builtin.shell:
+      cmd: ls -l | grep log
       chdir: app
