@@ -23,4 +23,4 @@
       dest: /tmp/backend.zip
   - name: cd app
     ansible.builtin.shell:
-      chdir: /app
+      chdir: app
