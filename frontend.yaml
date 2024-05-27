@@ -25,3 +25,12 @@
       src: /tmp/frontend.zip
       dest: /usr/share/nginx/html
       remote_src: yes
+  - name: copy
+    ansible.builtin.copy:
+      src: expense.conf
+      dest: //etc/nginx/default.d/expense.conf
+  - name: start and enable backend
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
