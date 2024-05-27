@@ -40,10 +40,12 @@
       - PyMySQL
       - cryptography
       executable: pip3.9
+
   - name: login mysql
     community.mysql.mysql_db:
       login_user: root
-      login_host: db.phonestand.in
       login_password: ExpenseApp@1
+      login_host: db.phonestand.in
       target: /app/schema/backend.sql
       state: dump
+      name: all
