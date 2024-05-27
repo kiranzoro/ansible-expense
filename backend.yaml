@@ -41,7 +41,7 @@
       - cryptography
       executable: pip3.9
   - name: login mysql
-    ansible.mysql.mysql_db:
+    community.mysql.mysql_db:
       login_user: root
       login_host: db.phonestand.in
       login_password: ExpenseApp@1
