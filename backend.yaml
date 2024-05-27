@@ -47,5 +47,5 @@
       login_password: ExpenseApp@1
       login_host: db.phonestand.in
       target: /app/schema/backend.sql
-      state: dump
+      state: import
       name: all
